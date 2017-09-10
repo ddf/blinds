@@ -8,14 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		770CB9031F649F9200BB09E6 /* BlindsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 770CB9021F649F9200BB09E6 /* BlindsView.h */; };
-		770CB9051F649F9200BB09E6 /* BlindsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 770CB9041F649F9200BB09E6 /* BlindsView.m */; };
+		770CB9051F649F9200BB09E6 /* BlindsView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 770CB9041F649F9200BB09E6 /* BlindsView.mm */; };
+		770CB9111F64A70900BB09E6 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770CB9101F64A70900BB09E6 /* ScreenSaver.framework */; };
+		770CB9131F64A72F00BB09E6 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770CB9121F64A72F00BB09E6 /* AppKit.framework */; };
+		77FF70DE1F65E1D1007FE5B8 /* Blinds.saver in CopyFiles */ = {isa = PBXBuildFile; fileRef = 770CB8FF1F649F9200BB09E6 /* Blinds.saver */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77FF70DD1F65E18D007FE5B8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/Screen Savers";
+			dstSubfolderSpec = 0;
+			files = (
+				77FF70DE1F65E1D1007FE5B8 /* Blinds.saver in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		770CB8FF1F649F9200BB09E6 /* Blinds.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blinds.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		770CB9021F649F9200BB09E6 /* BlindsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlindsView.h; sourceTree = "<group>"; };
-		770CB9041F649F9200BB09E6 /* BlindsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlindsView.m; sourceTree = "<group>"; };
+		770CB9041F649F9200BB09E6 /* BlindsView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BlindsView.mm; sourceTree = "<group>"; };
 		770CB9061F649F9200BB09E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		770CB9101F64A70900BB09E6 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		770CB9121F64A72F00BB09E6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				770CB9131F64A72F00BB09E6 /* AppKit.framework in Frameworks */,
+				770CB9111F64A70900BB09E6 /* ScreenSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +54,7 @@
 			children = (
 				770CB9011F649F9200BB09E6 /* Blinds */,
 				770CB9001F649F9200BB09E6 /* Products */,
+				770CB90F1F64A70900BB09E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,10 +70,19 @@
 			isa = PBXGroup;
 			children = (
 				770CB9021F649F9200BB09E6 /* BlindsView.h */,
-				770CB9041F649F9200BB09E6 /* BlindsView.m */,
+				770CB9041F649F9200BB09E6 /* BlindsView.mm */,
 				770CB9061F649F9200BB09E6 /* Info.plist */,
 			);
 			path = Blinds;
+			sourceTree = "<group>";
+		};
+		770CB90F1F64A70900BB09E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				770CB9121F64A72F00BB09E6 /* AppKit.framework */,
+				770CB9101F64A70900BB09E6 /* ScreenSaver.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +107,7 @@
 				770CB8FB1F649F9200BB09E6 /* Frameworks */,
 				770CB8FC1F649F9200BB09E6 /* Headers */,
 				770CB8FD1F649F9200BB09E6 /* Resources */,
+				77FF70DD1F65E18D007FE5B8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -135,7 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770CB9051F649F9200BB09E6 /* BlindsView.m in Sources */,
+				770CB9051F649F9200BB09E6 /* BlindsView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +307,7 @@
 				770CB90B1F649F9200BB09E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
